@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import Button from "@/components/Button";
 import { motion, Variants, useAnimation, useInView } from "framer-motion";
-import "../stylesheets/text.css";
+import "../../stylesheets/text.css";
 
 export default function Home() {
   const about = [
