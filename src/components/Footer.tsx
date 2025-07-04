@@ -1,5 +1,7 @@
-// components/Footer.jsx
+"use client";
+
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -19,24 +21,32 @@ const Footer = () => {
           <h3 className='text-lg font-semibold mb-4'>Quick Links</h3>
           <ul className='space-y-2 text-gray-400 text-sm'>
             <li>
-              <a href='/' className='hover:text-[#ff4655]'>
-                Home
-              </a>
+              <Link href='/'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Home
+                </span>
+              </Link>
             </li>
             <li>
-              <a href='/shop' className='hover:text-[#ff4655]'>
-                Shop
-              </a>
+              <Link href='/shop'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Shop
+                </span>
+              </Link>
             </li>
             <li>
-              <a href='/cart' className='hover:text-[#ff4655]'>
-                Cart
-              </a>
+              <Link href='/cart'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Cart
+                </span>
+              </Link>
             </li>
             <li>
-              <a href='/contact' className='hover:text-[#ff4655]'>
-                Contact Us
-              </a>
+              <Link href='/contact'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Contact Us
+                </span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -46,24 +56,30 @@ const Footer = () => {
           <h3 className='text-lg font-semibold mb-4'>Support</h3>
           <ul className='space-y-2 text-gray-400 text-sm'>
             <li>
-              <a href='/faq' className='hover:text-[#ff4655]'>
-                FAQ
-              </a>
+              <Link href='/faq'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>FAQ</span>
+              </Link>
             </li>
             <li>
-              <a href='/returns' className='hover:text-[#ff4655]'>
-                Returns
-              </a>
+              <Link href='/returns'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Returns
+                </span>
+              </Link>
             </li>
             <li>
-              <a href='/shipping' className='hover:text-[#ff4655]'>
-                Shipping
-              </a>
+              <Link href='/shipping'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Shipping
+                </span>
+              </Link>
             </li>
             <li>
-              <a href='/privacy' className='hover:text-[#ff4655]'>
-                Privacy Policy
-              </a>
+              <Link href='/privacy'>
+                <span className='hover:text-[#ff4655] cursor-pointer'>
+                  Privacy Policy
+                </span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -72,16 +88,16 @@ const Footer = () => {
         <div>
           <h3 className='text-lg font-semibold mb-4'>Follow Us</h3>
           <div className='flex gap-4 text-white text-xl'>
-            <a href='#' className='hover:text-blue-500'>
+            <a href='#' aria-label='Facebook' className='hover:text-blue-500'>
               <Facebook size={20} />
             </a>
-            <a href='#' className='hover:text-pink-500'>
+            <a href='#' aria-label='Instagram' className='hover:text-pink-500'>
               <Instagram size={20} />
             </a>
-            <a href='#' className='hover:text-sky-400'>
+            <a href='#' aria-label='Twitter' className='hover:text-sky-400'>
               <Twitter size={20} />
             </a>
-            <a href='#' className='hover:text-red-600'>
+            <a href='#' aria-label='YouTube' className='hover:text-red-600'>
               <Youtube size={20} />
             </a>
           </div>

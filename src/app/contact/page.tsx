@@ -10,7 +10,7 @@ const Contact = () => {
           Contact Us
         </h2>
         <p className='text-gray-300'>
-          Have any questions or feedback? We'd love to hear from you!
+          Have any questions or feedback? We&apos;d love to hear from you!
         </p>
       </div>
 

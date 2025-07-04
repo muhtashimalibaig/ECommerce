@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../app/redux/store";
 import { removeFromCart } from "@/app/redux/cartSlice";
 import Link from "next/link";
+import Image from "next/image";
 
 const CartDrawer = ({
   isOpen,
@@ -40,10 +41,12 @@ const CartDrawer = ({
               <li
                 key={item.id}
                 className='flex items-center justify-between bg-zinc-900 rounded-lg p-3'>
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className='w-16 h-16 object-contain'
+                  width={64}
+                  height={64}
+                  className='object-contain'
                 />
                 <div className='flex-1 px-4'>
                   <p className='text-sm font-semibold'>{item.title}</p>

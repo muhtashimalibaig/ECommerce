@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../redux/cartSlice";
 import { RootState } from "../redux/store";
 
-// interface
+// Interface for Product
 interface Product {
   id: number;
   title: string;
@@ -18,11 +18,12 @@ interface Product {
 
 export default function Product() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  const dispatch = useDispatch();
+
   const [products, setProducts] = useState<Product[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
